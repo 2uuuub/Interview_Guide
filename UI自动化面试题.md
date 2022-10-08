@@ -89,6 +89,18 @@
     第三:开启usb调试模式并连接电脑,在谷歌浏览器打开调试网址chrome://inspect#devices  
     第四:点击inspect,打开页面,开始定位元素  
     
+**16.写一个接口自动化示例?**  
+    import requests  
+    url="http://www.baidu.com"  
+    headers={"Content-Type":"application/json"}  
+    data={  
+          "data":[{  
+                  "dep_id":"T01",  
+                  "master_name":"test-master"  
+              }]  
+          }  
+    r=requests.post(url,json=data,headers=headers)  
+    print(r)  
     
 
     
