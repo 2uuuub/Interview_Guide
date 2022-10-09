@@ -89,23 +89,11 @@
     第三:开启usb调试模式并连接电脑,在谷歌浏览器打开调试网址chrome://inspect#devices  
     第四:点击inspect,打开页面,开始定位元素  
     
-**16.写一个接口自动化示例?**  
-    import requests  
-    url="http://www.baidu.com"  
-    headers={"Content-Type":"application/json"}  
-    data={  
-          "data":[{  
-                  "dep_id":"T01",  
-                  "master_name":"test-master"  
-              }]  
-          }  
-    r=requests.post(url,json=data,headers=headers)  
-    print(r)  
-    
-**17.如何提高自动化测试的效率?**  
+**16.如何提高自动化测试的效率?**  
     第一:利用多线程/多进程执行用例  
-    第二:根据业务需求封装好自动超时时间,timeout之后若无响应则提示用例失败  
-    第三:封装失败自动重试,重试失败再提示用例失败  
-    第四:精简用例逻辑,比如有些操作没必要滑动页面,不要写滑动页面  
+    第二:使用显性等待,元素加载之后立即执行下一步  
+    第三:根据业务需求封装好自动超时时间,timeout之后若无响应则提示用例失败,减少阻塞时间  
+    第四:封装失败自动重试,重试失败再提示用例失败,减少重跑时间  
+    第五:精简不必要的用例逻辑,比如有些操作没必要滑动页面,不要写滑动页面  
 
     
