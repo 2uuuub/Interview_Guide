@@ -58,7 +58,7 @@
     assert_element()  
     wait_for_element_visible()  
     
-**12.写一个po模型实例?**  
+**12.写一个po模型封装实例?**  
     元素定位:  
     def get_element(self,*locator):  
         return self.driver.find_element(*locator)  
@@ -102,5 +102,10 @@
     r=requests.post(url,json=data,headers=headers)  
     print(r)  
     
+**17.如何提高自动化测试的效率?**  
+    第一:利用多线程/多进程执行用例  
+    第二:根据业务需求封装好自动超时时间,timeout之后若无响应则提示用例失败  
+    第三:封装失败自动重试,重试失败再提示用例失败  
+    第四:精简用例逻辑,比如有些操作没必要滑动页面,不要写滑动页面  
 
     
