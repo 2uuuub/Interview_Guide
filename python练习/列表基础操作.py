@@ -16,7 +16,7 @@ print("第一:", list1)
 list1.sort(reverse=True)
 print("第二:", list1)
 # 第三.将列表去重
-list_only = set(list1)
+list_only = list(set(list1))  # set会自动排序且生成字典
 print("第三:", list_only)
 # 第四.将列表求和
 list_total = sum(list1)
